@@ -7,8 +7,8 @@
 
 ### Auth
 
-- [ ] **AUTH-01**: Kullanıcı Google hesabıyla giriş yapabilir
-- [ ] **AUTH-02**: İlk girişte kimlik cümlesi (identity sentence) girilmesi istenir ve Firestore'a kaydedilir
+- [x] **AUTH-01**: Kullanıcı Google hesabıyla giriş yapabilir
+- [x] **AUTH-02**: İlk girişte kimlik cümlesi (identity sentence) girilmesi istenir ve Firestore'a kaydedilir
 - [ ] **AUTH-03**: PWA kurulum banner'ı ilk açılışta bir kez gösterilir
 - [ ] **AUTH-04**: Kullanıcı oturumu tarayıcı yenilenmesinde korunur (Firebase persistence)
 - [ ] **AUTH-05**: Kullanıcı hesaptan çıkış yapabilir
@@ -80,8 +80,8 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AUTH-01 | Phase 1 | Pending |
-| AUTH-02 | Phase 1 | Pending |
+| AUTH-01 | Phase 1 | Complete |
+| AUTH-02 | Phase 1 | Complete |
 | AUTH-03 | Phase 1 | Pending |
 | AUTH-04 | Phase 1 | Pending |
 | AUTH-05 | Phase 1 | Pending |
