@@ -123,3 +123,45 @@ export function isHabitScheduledToday(
 
   return false;
 }
+
+/**
+ * Parse a YYYY-MM-DD string to a Date object in UTC
+ * @param dateStr - Date string in YYYY-MM-DD format
+ * @returns Date object at midnight UTC
+ */
+export function getDateFromString(dateStr: string): Date {
+  const [year, month, day] = dateStr.split("-").map(Number);
+  return new Date(Date.UTC(year, month - 1, day));
+}
+
+/**
+ * Check if a habit's schedule matches a given date
+ * 
+ * @param date - The date to check (Date object)
+ * @param schedule - The habit's schedule type
+ * @param timezone - User's timezone for determining day-of-week
+ * @returns true if habit is scheduled for that date
+ */
+export function isHabitScheduledOnDate(
+  date: Date,
+  schedule: HabitSchedule,
+  timezone: string = getUserTimezone()
+): boolean {
+  if (schedule === "daily") {
+    return true;
+  }
+
+  const dayOfWeek = getDayOfWeekInTimezone(date, timezone);
+
+  if (schedule === "weekdays") {
+    // Monday (1) through Friday (5)
+    return dayOfWeek >= 1 && dayOfWeek <= 5;
+  }
+
+  if (schedule === "weekends") {
+    // Saturday (6) or Sunday (0)
+    return dayOfWeek === 0 || dayOfWeek === 6;
+  }
+
+  return false;
+}

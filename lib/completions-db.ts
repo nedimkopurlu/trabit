@@ -186,3 +186,37 @@ export function listenToTodaysCompletions(
     }
   );
 }
+
+/**
+ * Set up real-time listener for ALL completions of a habit
+ * (used when heat map needs all-time history + real-time updates)
+ * 
+ * @param uid - User ID
+ * @param habitId - Habit ID
+ * @param callback - Function called with full completions array whenever any completion changes
+ * @returns Unsubscribe function
+ */
+export function listenToAllCompletions(
+  uid: string,
+  habitId: string,
+  callback: (completions: HabitCompletion[]) => void
+): Unsubscribe {
+  const completionsRef = collection(
+    db,
+    `users/${uid}/habits/${habitId}/completions`
+  );
+
+  return onSnapshot(
+    completionsRef,
+    snapshot => {
+      const completions = snapshot.docs
+        .map(doc => doc.data() as HabitCompletion)
+        .sort((a, b) => a.date.localeCompare(b.date));
+      callback(completions);
+    },
+    error => {
+      console.error("Error listening to all completions:", error);
+      callback([]);
+    }
+  );
+}
