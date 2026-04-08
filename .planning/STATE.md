@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 01-01-PLAN.md — Next.js scaffold + app shell
-last_updated: "2026-04-08T15:25:34.796Z"
+stopped_at: Completed 01-02-PLAN.md — Firebase Auth, AuthContext, route guard, onboarding UI — awaiting human verification at checkpoint Task 3
+last_updated: "2026-04-08T15:31:05.878Z"
 progress:
   total_phases: 5
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 3
-  completed_plans: 1
+  completed_plans: 3
 ---
 
 # Project State
@@ -24,7 +24,7 @@ See: .planning/PROJECT.md (updated 2026-04-08)
 ## Current Position
 
 Phase: 01 (foundation) — EXECUTING
-Plan: 2 of 3
+Plan: 3 of 3
 
 ## Performance Metrics
 
@@ -47,6 +47,8 @@ Plan: 2 of 3
 
 *Updated after each plan completion*
 | Phase 01 P01 | 5 | 2 tasks | 19 files |
+| Phase 01-03 P03 | 3 | 2 tasks | 8 files |
+| Phase 01 P02 | 8 | 2 tasks | 11 files |
 
 ## Accumulated Context
 
@@ -63,6 +65,11 @@ Recent decisions affecting current work:
 - [Phase 01]: darkMode: class strategy in Tailwind — toggled via document.documentElement.classList, persisted in localStorage
 - [Phase 01]: ThemeScript inline script prevents flash before React hydration
 - [Phase 01]: Route group (app) wraps tab pages; login and onboarding are standalone (no TabBar)
+- [Phase 01-03]: next-pwa disabled in development to avoid SW/HMR conflicts
+- [Phase 01-03]: sharp devDependency for exact-size PNG icon generation
+- [Phase 01-03]: IOSInstallBanner placed outside AuthProvider as last body child
+- [Phase 01]: Firebase initialized with placeholder env defaults to prevent SSR build errors; real values loaded at runtime
+- [Phase 01]: iOS/PWA detection (navigator.userAgent + display-mode standalone) selects signInWithRedirect over signInWithPopup
 
 ### Pending Todos
 
@@ -74,6 +81,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-08T15:25:34.794Z
-Stopped at: Completed 01-01-PLAN.md — Next.js scaffold + app shell
+Last session: 2026-04-08T15:31:05.875Z
+Stopped at: Completed 01-02-PLAN.md — Firebase Auth, AuthContext, route guard, onboarding UI — awaiting human verification at checkpoint Task 3
 Resume file: None

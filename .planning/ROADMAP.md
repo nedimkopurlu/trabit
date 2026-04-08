@@ -12,7 +12,7 @@ Trabit, tek kullanıcılı bir alışkanlık takip PWA'sıdır. Yolculuk şu sı
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - Google Auth, Firebase persistence ve PWA kurulum altyapısı
+- [x] **Phase 1: Foundation** - Google Auth, Firebase persistence ve PWA kurulum altyapısı (completed 2026-04-08)
 - [ ] **Phase 2: Habit Management** - Alışkanlık ekleme, düzenleme, silme ve hızlı ekleme akışı
 - [ ] **Phase 3: Today Tab** - Günlük alışkanlık listesi, tamamlama etkileşimleri ve animasyonlar
 - [ ] **Phase 4: Streak Tab** - 7 günlük ısı haritası ve alışkanlık başarı istatistikleri
@@ -33,8 +33,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 3 plans
 Plans:
 - [x] 1-01-PLAN.md — Scaffold Next.js 14 + Tailwind dark mode + 3-tab app shell
-- [ ] 1-02-PLAN.md — Firebase + Google Auth + persistence + identity sentence onboarding (AUTH-01, AUTH-02, AUTH-04, AUTH-05)
-- [ ] 1-03-PLAN.md — next-pwa Service Worker + manifest + iOS install banner (AUTH-03, PWA-01, PWA-02)
+- [x] 1-02-PLAN.md — Firebase + Google Auth + persistence + identity sentence onboarding (AUTH-01, AUTH-02, AUTH-04, AUTH-05)
+- [x] 1-03-PLAN.md — next-pwa Service Worker + manifest + iOS install banner (AUTH-03, PWA-01, PWA-02)
 
 ### Phase 2: Habit Management
 **Goal**: Kullanıcı alışkanlıklarını oluşturabilir, düzenleyebilir ve silebilir; her alışkanlığın zamanlama, tip ve önem özellikleri tam olarak çalışır
@@ -89,7 +89,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 1/3 | In Progress|  |
+| 1. Foundation | 3/3 | Complete   | 2026-04-08 |
 | 2. Habit Management | 0/? | Not started | - |
 | 3. Today Tab | 0/? | Not started | - |
 | 4. Streak Tab | 0/? | Not started | - |

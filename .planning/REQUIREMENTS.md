@@ -9,9 +9,9 @@
 
 - [x] **AUTH-01**: Kullanıcı Google hesabıyla giriş yapabilir
 - [x] **AUTH-02**: İlk girişte kimlik cümlesi (identity sentence) girilmesi istenir ve Firestore'a kaydedilir
-- [ ] **AUTH-03**: PWA kurulum banner'ı ilk açılışta bir kez gösterilir
-- [ ] **AUTH-04**: Kullanıcı oturumu tarayıcı yenilenmesinde korunur (Firebase persistence)
-- [ ] **AUTH-05**: Kullanıcı hesaptan çıkış yapabilir
+- [x] **AUTH-03**: PWA kurulum banner'ı ilk açılışta bir kez gösterilir
+- [x] **AUTH-04**: Kullanıcı oturumu tarayıcı yenilenmesinde korunur (Firebase persistence)
+- [x] **AUTH-05**: Kullanıcı hesaptan çıkış yapabilir
 
 ### Habit
 
@@ -47,8 +47,8 @@
 
 ### PWA
 
-- [ ] **PWA-01**: Uygulama iPhone ana ekranına PWA olarak kurulabilir (next-pwa + manifest)
-- [ ] **PWA-02**: Service Worker ile temel offline desteği sağlanır
+- [x] **PWA-01**: Uygulama iPhone ana ekranına PWA olarak kurulabilir (next-pwa + manifest)
+- [x] **PWA-02**: Service Worker ile temel offline desteği sağlanır
 
 ### Notifications
 
@@ -82,11 +82,11 @@
 |-------------|-------|--------|
 | AUTH-01 | Phase 1 | Complete |
 | AUTH-02 | Phase 1 | Complete |
-| AUTH-03 | Phase 1 | Pending |
-| AUTH-04 | Phase 1 | Pending |
-| AUTH-05 | Phase 1 | Pending |
-| PWA-01 | Phase 1 | Pending |
-| PWA-02 | Phase 1 | Pending |
+| AUTH-03 | Phase 1 | Complete |
+| AUTH-04 | Phase 1 | Complete |
+| AUTH-05 | Phase 1 | Complete |
+| PWA-01 | Phase 1 | Complete |
+| PWA-02 | Phase 1 | Complete |
 | HABIT-01 | Phase 2 | Pending |
 | HABIT-02 | Phase 2 | Pending |
 | HABIT-03 | Phase 2 | Pending |
