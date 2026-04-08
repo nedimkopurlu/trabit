@@ -84,7 +84,11 @@ Plans:
   2. Kullanıcı kimlik cümlesini ayarlardan düzenleyebilir; güncelleme tamamlama toastlarına yansır
   3. Her alışkanlık için bağımsız bildirim saati ayarlanabilir
   4. Belirlenen saatte PWA push bildirimi gönderilir (iOS PWA kısıtları dahilinde best-effort)
-**Plans**: TBD
+**Plans**: 3 plans
+Plans:
+- [ ] 5-01-PLAN.md — Settings UI: Theme toggle (SETTINGS-01) + Identity sentence editing (SETTINGS-02)
+- [ ] 5-02-PLAN.md — Notification scheduler: Per-habit times + client polling + Notification API (NOTIF-01, NOTIF-02)
+- [ ] 5-03-PLAN.md — Notification permissions banner + iOS documentation (NOTIF-02 setup)
 
 ## Progress
 
@@ -95,6 +99,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete    | 2026-04-08 |
 | 2. Habit Management | 3/3 | Complete | 2026-04-08 |
-| 3. Today Tab | 0/? | Planning | - |
-| 4. Streak Tab | 0/? | Not started | - |
-| 5. Settings & Notifications | 0/? | Not started | - |
+| 3. Today Tab | 4/4 | Complete | 2026-04-08 |
+| 4. Streak Tab | 3/3 | Complete | 2026-04-08 |
+| 5. Settings & Notifications | 3/3 | Planning | - |
