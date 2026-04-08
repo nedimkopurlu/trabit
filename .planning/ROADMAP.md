@@ -30,7 +30,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Sayfa yenilendiğinde oturum kapanmaz, kullanıcı giriş ekranına dönmez
   4. Kullanıcı hesaptan çıkış yapabilir ve giriş ekranına yönlendirilir
   5. Safari'de "Ana Ekrana Ekle" banner'ı ilk açılışta bir kez görünür; uygulama PWA olarak kurulabilir ve offline temel çalışır
-**Plans**: TBD
+**Plans**: 3 plans
+Plans:
+- [ ] 1-01-PLAN.md — Scaffold Next.js 14 + Tailwind dark mode + 3-tab app shell
+- [ ] 1-02-PLAN.md — Firebase + Google Auth + persistence + identity sentence onboarding (AUTH-01, AUTH-02, AUTH-04, AUTH-05)
+- [ ] 1-03-PLAN.md — next-pwa Service Worker + manifest + iOS install banner (AUTH-03, PWA-01, PWA-02)
 
 ### Phase 2: Habit Management
 **Goal**: Kullanıcı alışkanlıklarını oluşturabilir, düzenleyebilir ve silebilir; her alışkanlığın zamanlama, tip ve önem özellikleri tam olarak çalışır
@@ -85,7 +89,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/? | Not started | - |
+| 1. Foundation | 0/3 | Not started | - |
 | 2. Habit Management | 0/? | Not started | - |
 | 3. Today Tab | 0/? | Not started | - |
 | 4. Streak Tab | 0/? | Not started | - |
