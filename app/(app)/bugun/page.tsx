@@ -1,7 +1,3 @@
-export default function BugunPage() {
-  return <TodayPageClient />;
-}
-
 "use client";
 
 import { useMemo, useState, useEffect } from "react";
@@ -91,4 +87,8 @@ function TodayPageClient() {
       <ToastContainer />
     </main>
   );
+}
+
+export default function BugunPage() {
+  return <TodayPageClient />;
 }
