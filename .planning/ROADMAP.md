@@ -13,7 +13,7 @@ Trabit, tek kullanıcılı bir alışkanlık takip PWA'sıdır. Yolculuk şu sı
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - Google Auth, Firebase persistence ve PWA kurulum altyapısı (completed 2026-04-08)
-- [ ] **Phase 2: Habit Management** - Alışkanlık ekleme, düzenleme, silme ve hızlı ekleme akışı
+- [x] **Phase 2: Habit Management** - Alışkanlık ekleme, düzenleme, silme ve hızlı ekleme akışı (completed 2026-04-08)
 - [ ] **Phase 3: Today Tab** - Günlük alışkanlık listesi, tamamlama etkileşimleri ve animasyonlar
 - [ ] **Phase 4: Streak Tab** - 7 günlük ısı haritası ve alışkanlık başarı istatistikleri
 - [ ] **Phase 5: Settings & Notifications** - Tema, kimlik cümlesi yönetimi ve push bildirimleri
@@ -46,11 +46,11 @@ Plans:
   3. Mevcut alışkanlığın herhangi bir özelliği düzenlenebilir
   4. Alışkanlık silinebilir ve listeden kalkar
   5. Ana ekrandaki "+" butonu tıklandığında hızlı alışkanlık ekleme akışı açılır
-**Plans**: 3 plans
+**Plans**: 3 plans (COMPLETE)
 Plans:
-- [x] 2-01-PLAN.md — Data layer: Habit types, Firestore CRUD, useHabits hook, security rules
-- [x] 2-02-PLAN.md — Form UI: HabitForm component with validation, HabitFormSheet animated wrapper
-- [ ] 2-03-PLAN.md — Integration: FAB in app layout, HabitList in Ayarlar, edit/delete flows
+- [x] 2-01-PLAN.md — Data layer: Habit types, Firestore CRUD, useHabits hook, security rules (completed 2026-04-08)
+- [x] 2-02-PLAN.md — Form UI: HabitForm component with validation, HabitFormSheet animated wrapper (completed 2026-04-08)
+- [x] 2-03-PLAN.md — Integration: FAB in app layout, HabitList in Ayarlar, edit/delete flows (completed 2026-04-08)
 
 ### Phase 3: Today Tab
 **Goal**: Kullanıcı o güne ait alışkanlıklarını görür, tamamlar ve her tamamlamada anlık görsel geri bildirim alır
@@ -94,7 +94,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete    | 2026-04-08 |
-| 2. Habit Management | 0/? | Not started | - |
-| 3. Today Tab | 0/? | Not started | - |
+| 2. Habit Management | 3/3 | Complete | 2026-04-08 |
+| 3. Today Tab | 0/? | Planning | - |
 | 4. Streak Tab | 0/? | Not started | - |
 | 5. Settings & Notifications | 0/? | Not started | - |
