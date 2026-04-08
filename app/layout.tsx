@@ -1,10 +1,22 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ThemeScript from "@/components/ThemeScript";
+import { AuthProvider } from "@/lib/auth-context";
+import { IOSInstallBanner } from "@/components/IOSInstallBanner";
 
 export const metadata: Metadata = {
   title: "Trabit",
   description: "Alışkanlık takip PWA",
+  manifest: "/manifest.json",
+  themeColor: "#0a0a0c",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "Trabit",
+  },
+  icons: {
+    apple: "/icons/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -21,7 +33,10 @@ export default function RootLayout({
         />
         <ThemeScript />
       </head>
-      <body className="min-h-screen bg-bg text-fg antialiased">{children}</body>
+      <body className="min-h-screen bg-bg text-fg antialiased">
+        <AuthProvider>{children}</AuthProvider>
+        <IOSInstallBanner />
+      </body>
     </html>
   );
 }
