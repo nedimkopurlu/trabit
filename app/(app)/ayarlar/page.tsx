@@ -4,6 +4,7 @@ import { useState } from "react";
 import { SignOutButton } from "@/components/SignOutButton";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { IdentitySentenceForm } from "@/components/IdentitySentenceForm";
+import { NotificationPermissionBanner } from "@/components/NotificationPermissionBanner";
 import HabitList from "@/components/HabitList";
 import HabitFormSheet from "@/components/HabitFormSheet";
 import type { Habit } from "@/lib/habit-types";
@@ -36,6 +37,17 @@ export default function AyarlarPage() {
       <section className="mb-8">
         <h2 className="text-lg font-medium text-fg dark:text-fg mb-3">Kimlik</h2>
         <IdentitySentenceForm />
+      </section>
+
+      {/* Notifications Section */}
+      <section className="mb-8">
+        <h2 className="text-lg font-medium text-fg dark:text-fg mb-3">Bildirimler</h2>
+        <NotificationPermissionBanner />
+        <p className="text-xs text-fg/60 mt-2 p-3 bg-surface rounded-lg">
+          Bildirimler, uygulama açık iken gönderilir.
+          iOS PWA kısıtlaması nedeniyle arka planda bildirim gönderilemez.
+          Bildirimler hakkında daha fazla bilgi için lütfen ayarlarınızı kontrol ediniz.
+        </p>
       </section>
 
       {/* Habits Section */}
