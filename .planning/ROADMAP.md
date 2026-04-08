@@ -49,7 +49,7 @@ Plans:
 **Plans**: 3 plans
 Plans:
 - [x] 2-01-PLAN.md — Data layer: Habit types, Firestore CRUD, useHabits hook, security rules
-- [ ] 2-02-PLAN.md — Form UI: HabitForm component with validation, HabitFormSheet animated wrapper
+- [x] 2-02-PLAN.md — Form UI: HabitForm component with validation, HabitFormSheet animated wrapper
 - [ ] 2-03-PLAN.md — Integration: FAB in app layout, HabitList in Ayarlar, edit/delete flows
 
 ### Phase 3: Today Tab
