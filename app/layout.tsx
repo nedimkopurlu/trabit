@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import ThemeScript from "@/components/ThemeScript";
 import { AuthProvider } from "@/lib/auth-context";
+import { ToastProvider } from "@/lib/toast-context";
 import { IOSInstallBanner } from "@/components/IOSInstallBanner";
 
 export const metadata: Metadata = {
@@ -34,7 +35,9 @@ export default function RootLayout({
         <ThemeScript />
       </head>
       <body className="min-h-screen bg-bg text-fg antialiased">
-        <AuthProvider>{children}</AuthProvider>
+        <AuthProvider>
+          <ToastProvider>{children}</ToastProvider>
+        </AuthProvider>
         <IOSInstallBanner />
       </body>
     </html>
