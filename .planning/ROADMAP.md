@@ -48,7 +48,7 @@ Plans:
   5. Ana ekrandaki "+" butonu tıklandığında hızlı alışkanlık ekleme akışı açılır
 **Plans**: 3 plans
 Plans:
-- [ ] 2-01-PLAN.md — Data layer: Habit types, Firestore CRUD, useHabits hook, security rules
+- [x] 2-01-PLAN.md — Data layer: Habit types, Firestore CRUD, useHabits hook, security rules
 - [ ] 2-02-PLAN.md — Form UI: HabitForm component with validation, HabitFormSheet animated wrapper
 - [ ] 2-03-PLAN.md — Integration: FAB in app layout, HabitList in Ayarlar, edit/delete flows
 

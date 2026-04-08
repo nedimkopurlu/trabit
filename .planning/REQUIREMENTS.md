@@ -15,10 +15,10 @@
 
 ### Habit
 
-- [ ] **HABIT-01**: Kullanıcı alışkanlık ekleyebilir: ad, tip (boolean/miktar), zamanlama (her gün / hafta içi / hafta sonu), önem seviyesi (kritik/orta/düşük), emoji/ikon, özel renk, hedef bildirim saati
-- [ ] **HABIT-02**: Miktar alışkanlığı için başlangıçta hedef sayı belirlenir
-- [ ] **HABIT-03**: Kullanıcı mevcut alışkanlığı düzenleyebilir
-- [ ] **HABIT-04**: Kullanıcı alışkanlığı silebilir
+- [x] **HABIT-01**: Kullanıcı alışkanlık ekleyebilir: ad, tip (boolean/miktar), zamanlama (her gün / hafta içi / hafta sonu), önem seviyesi (kritik/orta/düşük), emoji/ikon, özel renk, hedef bildirim saati
+- [x] **HABIT-02**: Miktar alışkanlığı için başlangıçta hedef sayı belirlenir
+- [x] **HABIT-03**: Kullanıcı mevcut alışkanlığı düzenleyebilir
+- [x] **HABIT-04**: Kullanıcı alışkanlığı silebilir
 - [ ] **HABIT-05**: Ana ekranda sağ üst "+" butonu ile hızlı alışkanlık ekleme akışı açılır
 
 ### Today
@@ -87,10 +87,10 @@
 | AUTH-05 | Phase 1 | Complete |
 | PWA-01 | Phase 1 | Complete |
 | PWA-02 | Phase 1 | Complete |
-| HABIT-01 | Phase 2 | Pending |
-| HABIT-02 | Phase 2 | Pending |
-| HABIT-03 | Phase 2 | Pending |
-| HABIT-04 | Phase 2 | Pending |
+| HABIT-01 | Phase 2 | Complete |
+| HABIT-02 | Phase 2 | Complete |
+| HABIT-03 | Phase 2 | Complete |
+| HABIT-04 | Phase 2 | Complete |
 | HABIT-05 | Phase 2 | Pending |
 | TODAY-01 | Phase 3 | Pending |
 | TODAY-02 | Phase 3 | Pending |
