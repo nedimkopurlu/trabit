@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: 255 255 255;
+  --color-surface: 245 245 247;
+  --color-fg: 17 17 17;
+  --color-critical: 239 68 68;
+  --color-medium: 234 179 8;
+  --color-low: 34 197 94;
+}
+.dark {
+  --color-bg: 10 10 12;
+  --color-surface: 24 24 28;
+  --color-fg: 245 245 247;
+  --color-critical: 248 113 113;
+  --color-medium: 250 204 21;
+  --color-low: 74 222 128;
+}
+html, body { background: rgb(var(--color-bg)); color: rgb(var(--color-fg)); }
