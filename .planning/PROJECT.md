@@ -12,7 +12,12 @@ Kullanıcı, o güne ait alışkanlıklarını hızla görmeli, tamamlamalı ve 
 
 ### Validated
 
-(None yet — ship to validate)
+- ✓ Google Auth ile giriş yapılabilir — Phase 1
+- ✓ İlk giriş kimlik cümlesi akışı — Phase 1
+- ✓ Oturum yenileme sonrası korunur (browserLocalPersistence) — Phase 1
+- ✓ Hesaptan çıkış yapılabilir — Phase 1
+- ✓ PWA kurulum banner'ı (iOS one-time) — Phase 1
+- ✓ iPhone ana ekranına PWA kurulumu (next-pwa, manifest, SW) — Phase 1
 
 ### Active
 
