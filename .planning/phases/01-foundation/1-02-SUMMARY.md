@@ -62,11 +62,11 @@ Full authentication lifecycle for Trabit PWA:
 | 1 | Firebase singleton + AuthContext + user-doc | `3a9c1fb` | lib/firebase.ts, lib/auth-context.tsx, lib/user-doc.ts, firestore.rules |
 | 2 | Wire AuthProvider, route guard, UI | `585542b` | app/layout.tsx, app/(app)/layout.tsx, app/login/page.tsx, app/onboarding/page.tsx, components/SignOutButton.tsx |
 
-## Task 3: Checkpoint (Human Verification Required)
+## Task 3: Checkpoint (Human Verification)
 
-**Status:** Awaiting human verification of full auth lifecycle against real Firebase project.
+**Status:** APPROVED — Human verified the full auth lifecycle against real Firebase project on 2026-04-08.
 
-**Verification steps:**
+**Verification steps completed:**
 1. Create Firebase project and configure Google sign-in provider
 2. Copy SDK config into `.env.local`
 3. Deploy `firestore.rules` via `firebase deploy --only firestore:rules`
