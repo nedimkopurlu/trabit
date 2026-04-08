@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { SignOutButton } from "@/components/SignOutButton";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { IdentitySentenceForm } from "@/components/IdentitySentenceForm";
 import HabitList from "@/components/HabitList";
 import HabitFormSheet from "@/components/HabitFormSheet";
 import type { Habit } from "@/lib/habit-types";
@@ -23,15 +25,30 @@ export default function AyarlarPage() {
   return (
     <main className="p-4">
       <h1 className="text-2xl font-bold text-fg dark:text-fg mb-6">Ayarlar</h1>
-      
+
+      {/* Appearance Section */}
+      <section className="mb-8">
+        <h2 className="text-lg font-medium text-fg dark:text-fg mb-3">Görünüm</h2>
+        <ThemeToggle />
+      </section>
+
+      {/* Identity Section */}
+      <section className="mb-8">
+        <h2 className="text-lg font-medium text-fg dark:text-fg mb-3">Kimlik</h2>
+        <IdentitySentenceForm />
+      </section>
+
       {/* Habits Section */}
       <section className="mb-8">
         <h2 className="text-lg font-medium text-fg dark:text-fg mb-3">Alışkanlıklar</h2>
         <HabitList onEditHabit={handleEditHabit} />
       </section>
 
-      {/* Other Settings */}
-      <SignOutButton />
+      {/* Account Section */}
+      <section className="mb-8">
+        <h2 className="text-lg font-medium text-fg dark:text-fg mb-3">Hesap</h2>
+        <SignOutButton />
+      </section>
 
       {/* Edit Sheet */}
       <HabitFormSheet

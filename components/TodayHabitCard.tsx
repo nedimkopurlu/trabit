@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { Habit } from "@/lib/habit-types";
 import { useHabitCompletion } from "@/lib/use-habit-completion";
+import { useToast } from "@/lib/toast-context";
+import { useAuth } from "@/lib/auth-context";
 import { HabitCheckButton } from "./HabitCheckButton";
 
 export interface TodayHabitCardProps {
@@ -11,20 +13,41 @@ export interface TodayHabitCardProps {
 
 export function TodayHabitCard({ habit }: TodayHabitCardProps) {
   const { isComplete, toggleComplete, loading } = useHabitCompletion(habit.id);
+  const { addToast } = useToast();
+  const { identitySentence } = useAuth();
 
   const handleToggle = async () => {
     try {
+      const wasComplete = isComplete;
       await toggleComplete(false);
+
+      // Show toast only when marking as complete
+      if (!wasComplete && identitySentence) {
+        addToast(
+          `✓ ${habit.name} tamamlandı! ${identitySentence}`,
+          "success",
+          3000
+        );
+      }
     } catch (err) {
-      console.error("Error toggling completion:", err);
+      addToast("İşlem başarısız oldu", "error", 5000);
     }
   };
 
   const handleQuick = async () => {
     try {
+      const wasComplete = isComplete;
       await toggleComplete(true);
+
+      if (!wasComplete && identitySentence) {
+        addToast(
+          `✓ ${habit.name} tamamlandı! ${identitySentence}`,
+          "success",
+          3000
+        );
+      }
     } catch (err) {
-      console.error("Error quick completing:", err);
+      addToast("İşlem başarısız oldu", "error", 5000);
     }
   };
 

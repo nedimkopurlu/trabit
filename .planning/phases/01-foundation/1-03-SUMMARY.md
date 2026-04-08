@@ -139,3 +139,14 @@ None - all files are fully wired. IOSInstallBanner renders real UI and contains 
 ---
 *Phase: 01-foundation*
 *Completed: 2026-04-08*
+
+## Self-Check: PASSED
+
+- next.config.js: FOUND
+- public/manifest.json: FOUND
+- public/icons/icon-192.png: FOUND
+- public/icons/icon-512.png: FOUND
+- public/icons/apple-touch-icon.png: FOUND
+- lib/firestore-offline.ts: FOUND
+- components/IOSInstallBanner.tsx: FOUND
+- Commits: 40713c0 (feat Task 1), 45f944c (feat Task 2), fa5c538 (docs metadata) — all verified

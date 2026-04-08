@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { Habit } from "@/lib/habit-types";
 import { useHabitCompletion } from "@/lib/use-habit-completion";
+import { useToast } from "@/lib/toast-context";
+import { useAuth } from "@/lib/auth-context";
 import { ProgressBar } from "./ProgressBar";
 
 export interface AmountHabitCardProps {
@@ -11,17 +13,29 @@ export interface AmountHabitCardProps {
 
 export function AmountHabitCard({ habit }: AmountHabitCardProps) {
   const { amount, loading, setAmount } = useHabitCompletion(habit.id);
+  const { addToast } = useToast();
+  const { identitySentence } = useAuth();
+
+  const targetAmount = habit.targetAmount || 10;
 
   const handleDecrement = async () => {
     await setAmount(Math.max(0, amount - 1));
   };
 
   const handleIncrement = async () => {
-    const targetAmount = habit.targetAmount || 10;
-    await setAmount(Math.min(amount + 1, targetAmount));
+    const newAmount = Math.min(amount + 1, targetAmount);
+    await setAmount(newAmount);
+
+    // Show toast when reaching target
+    if (newAmount === targetAmount && identitySentence) {
+      addToast(
+        `✓ ${habit.name} tamamlandı! ${identitySentence}`,
+        "success",
+        3000
+      );
+    }
   };
 
-  const targetAmount = habit.targetAmount || 10;
   const isAtTarget = amount >= targetAmount;
 
   return (
