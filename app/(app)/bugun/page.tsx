@@ -4,7 +4,7 @@ export default function BugunPage() {
 
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import { useHabits } from "@/lib/use-habits";
 import { useAuth } from "@/lib/auth-context";
@@ -13,10 +13,13 @@ import { IMPORTANCE_ORDER } from "@/lib/habit-types";
 import { TodayHabitCard } from "@/components/TodayHabitCard";
 import { AmountHabitCard } from "@/components/AmountHabitCard";
 import { ToastContainer } from "@/components/ToastContainer";
+import { CelebrationScreen } from "@/components/CelebrationScreen";
+import { useHabitCompletion } from "@/lib/use-habit-completion";
 
 function TodayPageClient() {
   const { habits, loading } = useHabits();
-  const { user } = useAuth();
+  const { identitySentence } = useAuth();
+  const [showCelebration, setShowCelebration] = useState(false);
 
   const timezone = getUserTimezone();
 
@@ -28,6 +31,21 @@ function TodayPageClient() {
         return IMPORTANCE_ORDER[a.importance] - IMPORTANCE_ORDER[b.importance];
       });
   }, [habits, timezone]);
+
+  // Track completion count by listening to all today's habits
+  const completionStates = todayHabits.map(h => useHabitCompletion(h.id));
+  const completedCount = completionStates.filter(c => c.isComplete).length;
+
+  // Show celebration when all habits are completed
+  useEffect(() => {
+    if (
+      todayHabits.length > 0 &&
+      completedCount === todayHabits.length &&
+      !showCelebration
+    ) {
+      setShowCelebration(true);
+    }
+  }, [completedCount, todayHabits.length, showCelebration]);
 
   if (loading) {
     return (
@@ -60,6 +78,14 @@ function TodayPageClient() {
             )
           )}
         </AnimatePresence>
+      )}
+
+      {showCelebration && identitySentence && (
+        <CelebrationScreen
+          habitCount={completedCount}
+          identitySentence={identitySentence}
+          onDismiss={() => setShowCelebration(false)}
+        />
       )}
 
       <ToastContainer />
