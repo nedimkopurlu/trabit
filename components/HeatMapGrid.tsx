@@ -12,13 +12,21 @@ import type { HeatMapCell } from "@/lib/heat-map-utils";
 import { STATUS_COLORS } from "@/lib/heat-map-utils";
 
 interface HeatMapGridProps {
-  cells: HeatMapCell[]; // Array of 7 HeatMapCell objects
+  cells: HeatMapCell[]; // Array of HeatMapCell objects
+  columns?: 6 | 7 | 10; // Grid columns (default: 7)
   showTooltip?: boolean; // Default: true
   animated?: boolean; // Default: true; stagger animation on mount
 }
 
+const GRID_COLS: Record<6 | 7 | 10, string> = {
+  6: "grid-cols-6",
+  7: "grid-cols-7",
+  10: "grid-cols-10",
+};
+
 export default function HeatMapGrid({
   cells,
+  columns = 7,
   showTooltip = true,
   animated = true,
 }: HeatMapGridProps) {
@@ -47,7 +55,7 @@ export default function HeatMapGrid({
 
   return (
     <motion.div
-      className="grid grid-cols-7 gap-2"
+      className={`grid ${GRID_COLS[columns]} gap-1.5`}
       role="grid"
       initial={animated ? "hidden" : "visible"}
       animate="visible"

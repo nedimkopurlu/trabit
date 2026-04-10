@@ -65,20 +65,20 @@ export function getLast7DayWindow(
     const status = mapCompletionToStatus(completion, habit, cellDate, timezone);
 
     // Build tooltip
-    const formatter = new Intl.DateTimeFormat("en-US", {
+    const formatter = new Intl.DateTimeFormat("tr-TR", {
       month: "short",
       day: "numeric",
       timeZone: timezone,
     });
     const dateFormatted = formatter.format(cellDate);
-    const tooltip = `${dayOfWeek}, ${dateFormatted} - ${
+    const tooltip = `${dateFormatted} - ${
       status === "completed"
-        ? "Completed"
+        ? "Tamamlandı"
         : status === "quick"
-          ? "Quick (2dk)"
+          ? "Hızlı (2dk)"
           : status === "irrelevant"
-            ? "Not scheduled"
-            : "Missed"
+            ? "Planlanmamış"
+            : "Atlandı"
     }`;
 
     cells.push({
@@ -87,6 +87,54 @@ export function getLast7DayWindow(
       status,
       tooltip,
     });
+  }
+
+  return cells;
+}
+
+/**
+ * Generate 30-day heat map window (29 days before today + today)
+ *
+ * @param timezone - User's timezone
+ * @param completionsByDate - Map of date string to completion (for O(1) lookup)
+ * @param habit - Habit object for schedule checking
+ * @returns Array of HeatMapCell objects sorted oldest → newest
+ */
+export function getLast30DayWindow(
+  timezone: string,
+  completionsByDate: Map<string, HabitCompletion>,
+  habit: Habit
+): HeatMapCell[] {
+  const cells: HeatMapCell[] = [];
+  const today = getTodayInTimezone(timezone);
+
+  for (let i = 29; i >= 0; i--) {
+    const cellDate = new Date(today);
+    cellDate.setDate(cellDate.getDate() - i);
+
+    const dateStr = formatDateAsKey(cellDate);
+    const dayOfWeek = getDayOfWeekAbbr(cellDate, timezone);
+
+    const completion = completionsByDate.get(dateStr);
+    const status = mapCompletionToStatus(completion, habit, cellDate, timezone);
+
+    const formatter = new Intl.DateTimeFormat("tr-TR", {
+      month: "short",
+      day: "numeric",
+      timeZone: timezone,
+    });
+    const dateFormatted = formatter.format(cellDate);
+    const tooltip = `${dateFormatted} - ${
+      status === "completed"
+        ? "Tamamlandı"
+        : status === "quick"
+          ? "Hızlı (2dk)"
+          : status === "irrelevant"
+            ? "Planlanmamış"
+            : "Atlandı"
+    }`;
+
+    cells.push({ date: dateStr, dayOfWeek, status, tooltip });
   }
 
   return cells;

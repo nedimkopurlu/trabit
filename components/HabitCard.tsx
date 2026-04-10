@@ -50,6 +50,18 @@ export default function HabitCard({ habit, onEdit, onDeleted }: HabitCardProps) 
 
   return (
     <div className="rounded-xl border border-surface bg-surface dark:bg-neutral-800 p-4 flex items-center gap-3">
+      {/* Drag handle */}
+      <div className="text-fg/30 dark:text-fg/30 select-none" aria-hidden>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+          <circle cx="5" cy="4" r="1.5" />
+          <circle cx="5" cy="8" r="1.5" />
+          <circle cx="5" cy="12" r="1.5" />
+          <circle cx="11" cy="4" r="1.5" />
+          <circle cx="11" cy="8" r="1.5" />
+          <circle cx="11" cy="12" r="1.5" />
+        </svg>
+      </div>
+
       {/* Emoji */}
       <div className="text-2xl">{habit.emoji}</div>
 
